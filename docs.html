@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Eric Rochester">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.01 [en] (Win95; I) [Netscape]">
+   <TITLE>PTA Documentation</TITLE>
+</HEAD>
+<BODY>
+
+<H1>
+PTA Documentation</H1>
+
+<p>These scripts all take as input text files marked up with a form of
+SGML so restricted as to be almost worthless. You cannot use empty
+elements (with also specifying an end tag); there are no optional end
+tags; and there are only start and end tags and words and numbers. As
+I've said before, I'd wait for the next reincarnation.</p>
+
+<p>There are five scripts included: <a href="#text">text.pl</a>, <a
+href="#concord">concord.pl</a>, <a href="#search">search.pl</a>, <a
+href="#freq">freq.pl</a>, <a href="coll">coll.pl</a>.</p>
+
+<hr>
+
+<a name="text"></a><h2>text.pl</h2>
+
+<p>Text.pl prints a list of all the words in the text, in the order in
+which they appear in the text, one word per line. This could be
+useful to give as input to other programs.</p>
+
+<p>Usage: <tt>text.pl &lt;file&gt;</tt></p>
+
+<hr>
+
+<a name="concord"></a><h2>concord.pl</h2>
+
+<p>Concord.pl prints out a concordance of the text, citing each line
+by giving the line number in the file that the word occurs on and the
+character position of that word in the line.</p>
+
+<p>Usage: <tt>concord.pl &lt;file&gt;</tt></p>
+
+<hr>
+
+<a name="search"></a><h2>search.pl</h2>
+
+<p>Search.pl looks through the text for characters matching a Perl
+regular expression (see <tt>man perlre</tt> for more information on
+these). Notice that for some searches you may need to quote the
+regular expression so search.pl recognizes it as all one command line
+argument.</p>
+
+<p>Usage: <tt>search.pl &lt;file&gt; &lt;regular
+expression&gt;</tt></p>
+
+<hr>
+
+<a name="freq"></a><h2>freq.pl</h2>
+
+<p>Freq.pl prints a list of all the words in the text and how many
+times they occur.</p>
+
+<p>The &quote;-f&quote; command line option forces freq.pl to sort the
+results by frequency. The default sort order is alphabetic.</p>
+
+<p>Usage: <tt>freq.pl &lt;file&gt; [-f]</tt></p>
+
+<hr>
+
+<a name="coll"></a><h2>coll.pl</h2>
+
+<p>Coll.pl prints all the collocates of all the words in a text.</p>
+
+<p>The &quote;-w&quote; option specifies how many far to look to each
+side of each word. The default value is 5.</p>
+
+<p>Usage: <tt>coll.pl &lt;file&gt; [-w &lt;number&gt;]</tt></p>
+
+<hr>
+
+<P><I><A href="index.html">Back</A></I>
+<BR><I><A href="future.html">Next</A></I>
+
+<P><I>e-mail: <A HREF="mail:erochest@virtual.park.uga.edu">erochest@virtual.park.uga.edu</A></I>
+</BODY>
+</HTML>
